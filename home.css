@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f 10%, #feb47b 50%, #86a8e7 90%);
+
+  }
+
+.wrapper {
+    display: flex;
+}
+
+/* Sidebar */
+/* Sidebar styling for consistency across pages */
+.sidebar-wrapper {
+    width: 250px; /* Define a consistent width for the sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    color: #fff;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .sidebar-header {
+    padding: 20px;
+  }
+  
+  .company-name {
+    font-size: .9rem;
+    font-weight:540;
+    color: #0e0e0e;
+  }
+  
+  .metismenu {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .metismenu li {
+    padding: 13px 15px;
+    font-size: 1rem;
+  }
+  
+ 
+/* Flexbox to align icon and menu title on the same line */
+.metismenu li a {
+    display: flex;           /* Flexbox layout */
+    align-items: center;      /* Align items vertically */
+    text-decoration: none;
+    color: #3d3d3d;              /* Text color */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Adjust icon styling */
+  .metismenu li a .parent-icon {
+    margin-right: 10px;       /* Space between icon and text */
+    font-size: 1.2rem;        /* Icon size */
+    color: #1f80f7;              /* Icon color */
+  }
+  
+  /* Menu title aligned next to icon */
+  .metismenu li a .menu-title {
+    font-size: 1rem;          /* Text size */
+    color: #2a2a2a;              /* Text color */
+    vertical-align: middle;   /* Ensure vertical alignment with icon */
+  }
+  
+  .metismenu li a:hover {
+    background-color: #a7ded3a1; /* Background color on hover */
+    border-radius: 5px;          /* Rounded corners */
+  }
+  
+  
+  /* Content section to align with sidebar width */
+  .main-content {
+    margin-left: 250px; /* This margin should match the sidebar width */
+    padding: 20px;
+  }
+  
+  
+/* Dashboard Header */
+.dashboard-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    font-size: 1rem;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 768px) {
+    .sidebar-wrapper {
+      width: 100%; /* Full-width sidebar on mobile */
+      position: relative; /* Ensure it doesn’t cover content */
+    }
+  
+    .main-content {
+      margin-left: 0; /* Remove margin on smaller screens */
+    }
+  }
+  

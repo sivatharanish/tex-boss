@@ -1,0 +1,136 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+}
+
+/* Sidebar */
+/* Sidebar styling for consistency across pages */
+
+.metismenu {
+  padding-left: 0;
+  list-style: none;
+}
+
+.metismenu li {
+  padding: 13px 15px;
+  font-size: 1rem;
+}
+
+
+/* Flexbox to align icon and menu title on the same line */
+.metismenu li a {
+  display: flex;           /* Flexbox layout */
+  align-items: center;      /* Align items vertically */
+  text-decoration: none;
+  color: #3d3d3d;              /* Text color */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Adjust icon styling */
+.metismenu li a .parent-icon {
+  margin-right: 10px;       /* Space between icon and text */
+  font-size: 1.2rem;        /* Icon size */
+  color: #1f80f7;              /* Icon color */
+}
+
+/* Menu title aligned next to icon */
+.metismenu li a .menu-title {
+  font-size: 1rem;          /* Text size */
+  color: #2a2a2a;              /* Text color */
+  vertical-align: middle;   /* Ensure vertical alignment with icon */
+}
+
+.metismenu li a:hover {
+  background-color: #a7ded3a1; /* Background color on hover */
+  border-radius: 5px;          /* Rounded corners */
+}
+
+
+.main-content {
+  margin-left: 250px; /* Align with sidebar width */
+  padding: 20px;
+}
+
+/* Dashboard Header */
+
+.dashboard-header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.dashboard-header p {
+  font-size: 1rem;
+}
+
+/* Camera Grid */
+.container {
+  padding-top: 20px;
+}
+
+.camera-box {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.camera-feed {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.camera-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Modal Styles */
+.modal-dialog {
+  max-width: 90%;
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-body video {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    width: 100%; /* Full-width sidebar on mobile */
+    position: relative; /* Ensure it doesn’t cover content */
+  }
+
+  .main-content {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+}

@@ -1,0 +1,186 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff7e5f 10%, #feb47b 50%, #86a8e7 90%);
+
+ 
+}
+
+.wrapper {
+  display: flex;
+}
+
+
+
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+}
+
+.dashboard-header p {
+  font-size: 1rem;
+}
+
+/* Total Cash Card */
+
+.card-content-e
+{
+  width: 450px;
+  height: 230px;
+  object-fit: cover;
+  background-image: url('your-background-image.jpg'); /* Replace with your actual image path */
+  color: #fff; /* Ensures text is readable on the image */
+}
+
+.card-details{
+  padding: 40px 30px 30px 110px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  gap: 450px;
+
+
+}
+
+.total-cash-card {
+  background-image: url('your-background-image.jpg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff; /* Ensures text is readable on the image */
+  height: 200px; /* Adjust height */
+}
+
+.total-cash-card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.total-cash-card h3,
+.total-cash-card h2 {
+  color: #fff; /* To make text stand out against the background image */
+}
+
+.total-cash-card .bank-details {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.total-cash-card h2 {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+/* Transaction List */
+.transaction-list {
+  margin-top: 20px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.transaction-details span {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.transaction-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+/* Responsive Styles for Main Content */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Sidebar will be hidden on mobile, so no left margin needed */
+    padding: 10px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.9rem;
+  }
+
+  .total-cash-card {
+    height: 150px; /* Reduce height for mobile */
+  }
+
+  .total-cash-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .transaction-item {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .transaction-name {
+    font-size: 1rem;
+  }
+
+  .transaction-amount {
+    font-size: 1.3rem;
+    margin-top: 5px;
+  }
+
+  .transaction-details span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .total-cash-card h2 {
+    font-size: 1.2rem; /* Further reduce font size */
+  }
+
+  .transaction-amount {
+    font-size: 1.1rem;
+  }
+
+  .transaction-name {
+    font-size: 0.9rem;
+  }
+}

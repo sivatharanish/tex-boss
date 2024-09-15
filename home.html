@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Srinivasan Textiles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</head>
+<body>
+    <!-- Start Wrapper -->
+    <div class="wrapper">
+       <!-- Sidebar -->
+       <aside class="sidebar-wrapper" data-simplebar="true">
+        <div class="sidebar-header text-center">
+          <div style="padding: 20px;">
+            <img src="logo.png" width="100%" alt="Company Logo">
+          </div>
+          <h3 class="company-name">SRINIVASAN TEXTILES<hr></h3>
+        </div>
+      
+        <ul class="metismenu" id="menu">
+          <li><a href="home.html"><div class="parent-icon"><ion-icon name="home-outline"></ion-icon></div><div class="menu-title">Dashboard</div></a></li>
+          <li><a href="orders.html"><div class="parent-icon"><ion-icon name="cube-outline"></ion-icon></div><div class="menu-title">Orders</div></a></li>
+          <li><a href="inspection.html"><div class="parent-icon"><ion-icon name="videocam-outline"></ion-icon></div><div class="menu-title">Inspection</div></a></li>
+          <li><a href="transaction.html"><div class="parent-icon"><ion-icon name="wallet-outline"></ion-icon></div><div class="menu-title">Transactions</div></a></li>
+          <!-- Add other navigation items -->
+        </ul>
+      </aside>
+      
+
+       <!-- Main Content Area -->
+       <main class="main-content">
+           <header class="dashboard-header">
+               <h1>Dashboard Overview</h1>
+               <p>Welcome to the Srinivasan Textiles Dashboard. Here you can view real-time data, track ongoing orders, and manage appointments and attendance.</p>
+           </header>
+
+           <div class="container-fluid">
+               <div class="row">
+                   <!-- Time and Date -->
+                   <div class="col-lg-6 col-md-12 mb-4">
+                       <div class="card p-3 shadow-sm">
+                           <h4>Current Date & Time</h4>
+                           <p id="time-date"></p>
+                       </div>
+                   </div>
+
+                   <!-- Temperature -->
+                   <div class="col-lg-6 col-md-12 mb-4">
+                       <div class="card p-3 shadow-sm">
+                           <h4>Temperature</h4>
+                           <p id="temperature">28°C</p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="row">
+                   <!-- Appointments -->
+                   <div class="col-lg-6 col-md-12 mb-4">
+                       <div class="card p-3 shadow-sm">
+                           <h4>Today's Appointments</h4>
+                           <ul>
+                               <li>10:00 AM - Meeting with Supplier</li>
+                               <li>02:00 PM - Review Production</li>
+                           </ul>
+                       </div>
+                   </div>
+
+                   <!-- Attendance -->
+                   <div class="col-lg-6 col-md-12 mb-4">
+                       <div class="card p-3 shadow-sm">
+                           <h4>Attendance</h4>
+                           <p>Total Employees: 50</p>
+                           <p>Present: 45 | Absent: 3 | On Leave: 2</p>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="row">
+                   <!-- Workflow Graph -->
+                   <div class="col-lg-6 col-md-12 mb-4">
+                       <div class="card p-3 shadow-sm">
+                           <h4>Workflow Progress</h4>
+                           <canvas id="workflow-chart"></canvas>
+                       </div>
+                   </div>
+
+                   <!-- Ongoing Orders -->
+                   <div class="col-lg-6 col-md-12 mb-4">
+                       <div class="card p-3 shadow-sm">
+                           <h4>Ongoing Orders</h4>
+                           <ul>
+                               <li>Order Code: A123 | Status: Processing</li>
+                               <li>Order Code: B234 | Status: Quality Check</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript for Date/Time -->
+    <script>
+      function updateTimeAndDate() {
+        const now = new Date();
+        const timeDateElement = document.getElementById('time-date');
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+        timeDateElement.textContent = now.toLocaleDateString('en-US', options);
+      }
+      setInterval(updateTimeAndDate, 1000);
+    </script>
+
+    <!-- JavaScript for Workflow Graph -->
+    <script>
+      const ctx = document.getElementById('workflow-chart').getContext('2d');
+      const workflowChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['Completed', 'In Progress', 'Pending'],
+              datasets: [{
+                  label: 'Tasks',
+                  data: [10, 7, 3],
+                  backgroundColor: ['#4CAF50', '#FFC107', '#F44336'],
+              }]
+          },
+          options: {
+              responsive: true,
+              scales: {
+                  y: { beginAtZero: true }
+              }
+          }
+      });
+    </script>
+
+</body>
+</html>

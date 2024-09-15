@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fullscreen Background Video */
+  #background-video {
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Welcome Container Styling */
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    width: 810px;
+  }
+  
+  .welcome-content {
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+  }
+  
+  p {
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  select.form-select {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  /* Aligning Input and Button */
+  .form-group {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  input.form-control {
+    margin-bottom: 15px;
+  }
+  
+  button.btn {
+    width: 100%;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .col-md-5, .col-md-7 {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .welcome-content {
+      padding: 10px;
+    }
+  
+    button.btn-lg {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Logo Styling */
+  img.img-fluid {
+    max-width: 180px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #444;
+  }
+  
+  /* Form Styling */
+  input.form-control {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.25rem;
+  }
+  

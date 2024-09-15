@@ -1,0 +1,134 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .wrapper {
+    display: flex;
+  }
+  
+
+  .metismenu {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .metismenu li {
+    padding: 13px 15px;
+    font-size: 1rem;
+  }
+  
+  /* Flexbox to align icon and menu title on the same line */
+  .metismenu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #3d3d3d;
+    transition: background-color 0.3s ease;
+  }
+  
+  .metismenu li a .parent-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #1f80f7;
+  }
+  
+  .metismenu li a .menu-title {
+    font-size: 1rem;
+    color: #2a2a2a;
+    vertical-align: middle;
+  }
+  
+  .metismenu li a:hover {
+    background-color: #a7ded3a1;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 250px;
+    width:fit-content;
+    padding: 20px;
+    background-color: rgba(194, 99, 198, 0.527);
+  }
+  
+  /* Dashboard Header */
+  .dashboard-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-header p {
+    font-size: 1rem;
+  }
+  
+  /* Orders Display */
+.row {
+  
+  padding-top: 40px;
+}
+
+  .order-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .order-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .order-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .progress-container {
+    margin-top: 10px;
+  }
+  
+  .progress {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    background-color: #1f80f7;
+    height: 100%;
+  }
+  
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  
+  .progress-labels span {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  @media (max-width: auto) {
+    .sidebar-wrapper {
+      width: 100%;
+      position: relative;
+    }
+  
+    .main-content {
+      margin-left: 250px;
+    }
+  }
+  

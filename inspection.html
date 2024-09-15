@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspection | Srinivasan Textiles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="home.css"> <!-- Use the existing home.css for styling -->
+  <link rel="stylesheet" href="inspection.css"> <!-- New stylesheet for inspection page -->
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</head>
+<body>
+    <!-- Start Wrapper -->
+    <div class="wrapper">
+       <!-- Sidebar -->
+       <aside class="sidebar-wrapper" data-simplebar="true">
+        <div class="sidebar-header text-center">
+          <div style="padding: 20px;">
+            <img src="logo.png" width="100%" alt="Company Logo">
+          </div>
+          <h3 class="company-name">SRINIVASAN TEXTILES<hr></h3>
+        </div>
+      
+        <ul class="metismenu" id="menu">
+          <li><a href="home.html"><div class="parent-icon"><ion-icon name="home-outline"></ion-icon></div><div class="menu-title">Dashboard</div></a></li>
+          <li><a href="orders.html"><div class="parent-icon"><ion-icon name="cube-outline"></ion-icon></div><div class="menu-title">Orders</div></a></li>
+          <li><a href="inspection.html"><div class="parent-icon"><ion-icon name="videocam-outline"></ion-icon></div><div class="menu-title">Inspection</div></a></li>
+          <li><a href="transaction.html"><div class="parent-icon"><ion-icon name="wallet-outline"></ion-icon></div><div class="menu-title">Transactions</div></a></li>
+          <!-- Add other navigation items -->
+        </ul>
+      </aside>
+      
+
+       <!-- Main Content Area -->
+       <main class="main-content">
+           <header class="dashboard-header">
+               <h1>Live Camera Feeds</h1>
+               <p>Monitor real-time video feeds from various sections of the company.</p>
+           </header>
+
+           <!-- Camera Feeds - 6 feeds, 3 per row -->
+           <div class="container">
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="camera-box" data-bs-toggle="modal" data-bs-target="#cameraModal1">
+                    <video src="camera1.mp4" class="camera-feed" autoplay muted controlsList="nofullscreen nodownload"></video>
+                    <div class="camera-title">CAM 01 CABIN</div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="camera-box" data-bs-toggle="modal" data-bs-target="#cameraModal2">
+                    <video src="camera2.mp4" class="camera-feed" autoplay muted controlsList="nofullscreen nodownload"></video>
+                    <div class="camera-title">CAM 02 DYE LAB</div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="camera-box" data-bs-toggle="modal" data-bs-target="#cameraModal3">
+                    <video src="camera3.mp4" class="camera-feed" autoplay muted controlsList="nofullscreen nodownload"></video>
+                    <div class="camera-title">CAM 03 WEAVING UNIT</div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="camera-box" data-bs-toggle="modal" data-bs-target="#cameraModal4">
+                    <video src="camera4.mp4" class="camera-feed" autoplay muted controlsList="nofullscreen nodownload"></video>
+                    <div class="camera-title">CAM 04 SPINNING UNIT</div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="camera-box" data-bs-toggle="modal" data-bs-target="#cameraModal5">
+                    <video src="camera5.mp4" class="camera-feed" autoplay muted controlsList="nofullscreen nodownload"></video>
+                    <div class="camera-title">CAM 05 GINNING</div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="camera-box" data-bs-toggle="modal" data-bs-target="#cameraModal6">
+                    <video src="camera6.mp4" class="camera-feed" autoplay muted controlsList="nofullscreen nodownload"></video>
+                    <div class="camera-title">CAM 06 ORDER / DELIVERY</div>
+                  </div>
+                </div>
+              </div>
+           </div>
+
+           <!-- Camera Modals -->
+           <div class="modal fade" id="cameraModal1" tabindex="-1" aria-labelledby="cameraModalLabel1" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="cameraModalLabel1">CAM 01 CABIN</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                   <video src="camera1.mp4" class="camera-feed" autoplay muted controls></video>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Repeat for other camera modals -->
+           <!-- Camera Modal 2 -->
+           <div class="modal fade" id="cameraModal2" tabindex="-1" aria-labelledby="cameraModalLabel2" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="cameraModalLabel2">CAM 02 DYE LAB</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                   <video src="camera2.mp4" class="camera-feed" autoplay muted controls></video>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <!-- Camera Modal 3 -->
+           <div class="modal fade" id="cameraModal3" tabindex="-1" aria-labelledby="cameraModalLabel3" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="cameraModalLabel3">CAM 03 WEAVING UNIT</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                   <video src="camera3.mp4" class="camera-feed" autoplay muted controls></video>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <!-- Camera Modal 4 -->
+           <div class="modal fade" id="cameraModal4" tabindex="-1" aria-labelledby="cameraModalLabel4" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="cameraModalLabel4">CAM 04 SPINNING UNIT</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                   <video src="camera4.mp4" class="camera-feed" autoplay muted controls></video>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <!-- Camera Modal 5 -->
+           <div class="modal fade" id="cameraModal5" tabindex="-1" aria-labelledby="cameraModalLabel5" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="cameraModalLabel5">CAM 05 GINNING</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                   <video src="camera5.mp4" class="camera-feed" autoplay muted controls></video>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <!-- Camera Modal 6 -->
+           <div class="modal fade" id="cameraModal6" tabindex="-1" aria-labelledby="cameraModalLabel6" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="cameraModalLabel6">CAM 06 ORDER / DELIVERY</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                   <video src="camera6.mp4" class="camera-feed" autoplay muted controls></video>
+                 </div>
+               </div>
+             </div>
+           </div>
+       </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
